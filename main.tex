@@ -1,6 +1,34 @@
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
 \usepackage{amsmath}
+\usepackage[export]{adjustbox}
+\usepackage{bm}
+\usepackage{longtable}
+\usepackage[shortlabels]{enumitem}
 \usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{listings}
+\usepackage{color}                                            %%
+\usepackage{array}
+\usepackage{calc}       %%
+\usepackage{multirow}                                         %%
+\usepackage{hhline}                                           %%
+\usepackage{ifthen}                                           %%
+\usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{tfrupee}
+% \usepackage{enumerate}
+\DeclareMathOperator*{\Res}{Res}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+\newcommand{\uvec}[1]{\boldsymbol{\hat{\textbf{#1}}}}
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}  %%
 \usepackage{graphicx}
 \graphicspath{ {./} }
 \usepackage{multicol}
@@ -8,47 +36,34 @@
 \setlength{\columnsep}{1cm}
 \title{10th CBSE MATHEMATICS}
 \author{2006-07}
-
-
 \begin{document}
 \begin{enumerate}[label=1.\arabic*]
 \maketitle
-
 \section{Section A}
-\item Find the value of x and y:\\
-
-\begin{align*}
-    47x + 31y = 63\\
-    31x + 47y = 15\\
-\end{align*}
-
-\begin{align}
-	\centering \string{OR}\nonumber
-\end{align}
-
-\begin{center}
-    \( \dfrac{ax}{b}  - \dfrac{by}{a}  = a+b \)\\
-    \vspace{5mm}
-    \( ax - by = 2ab \)\\
-\end{center}
-
-\vspace{5mm}
-\item Given that P = \( \cfrac{2}{x^2 - x - 6}\) , Q = \( \cfrac{3}{x^2 + x - 3 }\) , R = \( \cfrac{4}{x^2 - 4x + 3}\) 
+\item Solve for x and y: \\
+\begin{enumerate}
+    \item $47x + 31y = 63\\$\\
+    $31x + 47y = 15\\$\\
+    \item $\dfrac{ax}{b}  - \dfrac{by}{a}  = a+b$\\
+    \vspace{1mm}\\
+    $ ax - by = 2ab $\\
+\end{enumerate}
+\item Given that P = $ \frac{2}{x^2 - x - 6}$ , Q = $ \frac{3}{x^2 + x - 3 }$ , R = $ \frac{4}{x^2 - 4x + 3}$ 
 . Find (P + Q) + R\\
 \vspace{5mm}\\
-\item If \( (x-2)(x+3)\) is the HCF of the polynomials\\
+\item If $ (x-2)(x+3) $ is the HCF of the polynomials\\
 \vspace{2mm}\\
-\( P(x) = (x^2 - 3x + 2)(2x^2 + 7x + a)\)  and\\
-\(Q(x) = (x^2 + 4x + 3)(3x^2 - 7x + b)\)\\
+$ P\myvec{x} = \myvec{x^2 - 3x + 2)(2x^2 + 7x + a}$  and\\
+$ Q\myvec{x} = \myvec{x^2 + 4x + 3}{3x^2 - 7x + b}$\\
 \vspace{2mm}\\
-Find the values of \( a\) and \( b\)\\
+Find the values of $a$ and $b$\\
 \vspace{5mm}\\
-\item Solve for 'x' \( 12abx^2 - (9a^2 - 8b^2) \cdot x - 6ab = 0\)\\
-\vspace{5mm}
-\begin{align}
-	\centering \string{OR}\nonumber
-\end{align}
-A two-digit number is such that the product of its digits is 35. When 18 is added the number the digits interchange their places. Find the number\\
+\item
+\begin{enumerate}
+    \item Solve for 'x', $ 12abx^2 - \myvec{9a^2 - 8b^2} \cdot x - 6ab = 0 $\\
+    \item A two-digit number is such that the product of its digits is 35. When 18 is added the number the digits interchange their places. Find the number\\
+\end{enumerate}
+
 
 \item The 6th term of an Arithmetic Progression (AP) is -10 and the term is -26. Determine the $15^{th}$ term of AP\\
 \item Find the sum of all the two digit natural numbers which are divisible by 4.\\
@@ -56,7 +71,7 @@ A two-digit number is such that the product of its digits is 35. When 18 is adde
 If the rate of interest charged under the installment plan is 25\% per annum. Find the amount of each installment.\\
 \item A man borrows Rs. 36,410 from a finance company and has to repay it in three equal annual installments. Find the amount of each
 installment if the rate of interest is 10\% per annum compounded annually.\\
-\item In Figure 1.1, \(  \ \angle{ACB} = 90^\circ , CD \perp AB \), prove that \(CD^2 = BD \cdot AD\)\\
+\item In Figure 1.1, $\angle{ACB} = 90^\circ , CD \perp AB $, prove that $CD^2 = BD \cdot AD $\\
 \includegraphics[scale = 0.75]{fig 1.1}\\
 \begin{flushright}
 Fig 1.1\\
@@ -73,8 +88,8 @@ Fig 1.2\\
 \vspace{3mm}\\
 \begin{enumerate}[label=2.\arabic*]
 \item Draw the graphs of the equations\\
-\( 4x - y - 8 = 0\)\\
-\( 2x - 3y + 6 = 0\)\\
+$ 4x - y - 8 = 0 $\\
+$ 2x - 3y + 6 = 0 $\\
 Also determine the vertices of the triangle formed by the lines and the
 x axis\\
 
@@ -83,28 +98,25 @@ is increased by 5 kmph, the journey would have taken 2 hours less. Find the
 original speed of the train.\\
 \item The radius of the base and the height of a solid right circular cylinder
 are in the ratio of 2:3, and its volume is \(1617 cm^3\). Find the total 
-surface area of the cylinder. ( Use $\pi$  as \( \cfrac{22}{7}\) )\\
-\item Prove that:\\
-\vspace{1mm}\\
-\( \cfrac{\sin{\theta} + \cos{\theta}}{\sin{\theta} - \cos{\theta}}  + \cfrac{\sin{\theta} - \cos{\theta}}{\sin{\theta} + \cos{\theta}} = \cfrac{2 \sec^2 \theta}{\tan^2 \theta - 1} \)\\
-\begin{align}
-	\centering \string{OR}\nonumber
-\end{align}
-Evaluate the following without using the trigonometric tables:\\
-\vspace{2mm}\\
-\( \cfrac{\sec^2(90^\circ - \theta) - \cot^2\theta}{\sin^2 25^\circ + \sin^2 65^\circ }\)\\
-\vspace{2mm}\\
-\( + \hspace{2mm} \cfrac{2\cos^2 60^\circ \tan^2 28^\circ tan^2 62^\circ}{3(sec^2 43^\circ - cot^2 47^\circ)}\)\\
+surface area of the cylinder. ( Use $\pi$  as % \cfrac{22}{7} $ )\\
+\item 
+\begin{enumerate}[a)] 
+    \item  Prove that:\\
+     $ \frac{\sin{\theta} + \cos{\theta}}{\sin{\theta} - \cos{\theta}}  + \frac{\sin{\theta} - \cos{\theta}}{\sin{\theta} + \cos{\theta}} = \ffrac{2 \sec^2 \theta}{\tan^2 \theta - 1} $\\
+     \item Evaluate the following without using the trigonometric tables:\\
+    \vspace{2mm}\\
+    $ \dfrac{\sec^2\myvec{90^\circ - \theta} - \cot^2\theta}{\sin^2 25^\circ + \sin^2 65^\circ }$\\
+    \vspace{2mm}\\
+    $ + \hspace{2mm} \dfrac{2\cos^2 60^\circ \tan^2 28^\circ tan^2 62^\circ}{3\myvec{sec^2 43^\circ - cot^2 47^\circ}}$\\
+\end{enumerate}
 
-\item Construct a triangle ABC in which BC = 7cm, \(\angle{A} = 60^\circ \)  and altitude AD = 5cm. Write the steps of construction as well.\\
+\item Construct a triangle ABC in which BC = 7cm, $\angle{A} = 60^\circ $  and altitude AD = 5cm. Write the steps of construction as well.\\
 
-\item Show that the points A = (1,2), B(S,4), C = (3,8), D = (-1,6) are the vertices of a square\\
-\begin{align}
-	\centering \string{OR}\nonumber
-\end{align}
-Find the coordinates of the point equidistant from the 3 points given, A(5,1), B(-3, -7), C(7,-1).\\
-
-\item Find the value of p for which the point (-1,3), (2,p) and (5,-1) are collinear. \\
+\item \begin{enumerate}[a)] 
+    \item Show that the points A = \myvec{1,2}, B \myvec{S,4}, C = \myvec{3,8}, D = \myvec{-1,6} are the vertices of a square\\
+    \item Find the coordinates of the point equidistant from the 3 points given, A\myvec{5,1}, B\myvec{-3, -7}, C\myvec{7,-1}.\\
+\end{enumerate}
+\item Find the value of p for which the point \myvec{-1,3}, \myvec{2,p} and \myvec{5,-1} are collinear. \\
 
 \item The Arithmetic mean of the following frequency distribution is 50. Find the value of p\\
 \vspace{1mm}\\
@@ -152,18 +164,16 @@ point, on the remaining part of the circle, Using the above, find $x$ in fig 1.3
 Fig 1.3\\
 \end{flushright}
 \vspace{2mm}
-\item The rain water from a roof $22m \times 20m$ drains into a cylindrical vessel, having a diameter at the base of 2m and a height of 3.5m. Lithe vessel is just full, find the rainfall in centimeters.\\
-\begin{align}
-	\centering \string{OR}\nonumber
-\end{align}
-A bucket made up of a metal sheet is in the form of a frustum of a cone of height 16cm, with its radii of its lower and upper ends at 8 and 20 cm respectively, Find the cost of the bucket if the cost of the metal sheet used is Rs $15$ per $100 cm^2$. (Use $\pi$ as 3.14)\\
+\item \begin{enumerate}[a)]
+\item The rain water from a roof $22m \times 20m$ drains into a cylindrical vessel, having a diameter at the base of $2m$ and a height of $3.5m$. Lithe vessel is just full, find the rainfall in centimeters.\\
+\item A bucket made up of a metal sheet is in the form of a frustum of a cone of height 16cm, with its radii of its lower and upper ends at 8 and 20 cm respectively, Find the cost of the bucket if the cost of the metal sheet used is Rs $15$ per $100 cm^2$. Use ($\pi$ as 3.14)\\
+\end{enumerate}
 
+\item \begin{enumerate}[a)]
 \item The angles of depression of the top and the bottom of a building 50 meters high as observed from the top of a tower are $30^\circ$ and $60^\circ$ respectively. Find the height of the tower and also the horizontal distance between the building and the tower\\
-\begin{align}
-	\centering \string{OR}\nonumber
-\end{align}
-The angle of elevation of the top of a tower is observed from a point on the ground as $\alpha$ and moving from that point the angle of elevation can be found to be $\beta$ metres towards the tower, the angle of elevation is $\theta$. Prove that the height of the tower is \( \dfrac{\tan \alpha \times \tan \beta}{\tan \beta - \tan \alpha}\)\\
-
+\item The angle of elevation of the top of a tower is observed from a point on the ground as $\alpha$ and moving from that point the angle of elevation can be found to be $\beta$ metres towards the tower, the angle of elevation is $\theta$. Prove that the height of the tower is \( \frac{\tan \alpha \times \tan \beta}{\tan \beta - \tan \alpha}\)\\
+\end{enumerate}
+\vspace{1mm}\\
 \item The annual income from the salary of Mrs. Usha, who is a senior citizen is Rs. 3,85,000, she donates Rs. 10,000 to the Prime Minister's relief fund (100\% exemption), and another Rs. 10,000 to a Charitable Society (50\% exemption), she contributes Rs. 70,000 to PFF annually, and pays a quartarly premium of Rs. 3,500 towards life insurance, She also purchases NSC's, for Rs. 20,000, she pays 1,600 per month towards income tax for 11 months. What is her tax liability ?\\
 Use the following for calculating income tax:\\
 1. Savings: 100\% exemption for savings upto Rs. 1,00,000\\
